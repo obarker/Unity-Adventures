@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
 
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        float scroll = Input.GetAxis("Mouse ScrollWheel");        
 
         Vector3 pos = transform.position;
 
@@ -52,6 +52,7 @@ public class CameraController : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
+
         transform.position = pos;
 
     }
